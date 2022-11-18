@@ -7,6 +7,7 @@ public class PauseController : MonoBehaviour
     public GameObject menuPanel;
     public SceneController sceneLoader;
     private bool opened;
+    public string sceneStart;
 
     // Start is called before the first frame update
     void Start()
@@ -59,7 +60,8 @@ public class PauseController : MonoBehaviour
     /// </summary>
     public void Exit()
     {
-        sceneLoader.LoadScene("Start");
+        Debug.Log(sceneStart);
+          sceneLoader.LoadScene(sceneStart);
     }
 
 }

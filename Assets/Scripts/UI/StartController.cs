@@ -5,6 +5,7 @@ using UnityEngine;
 public class StartController : MonoBehaviour
 {
     public SceneController sceneLoader;
+    public string LevelStart;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,7 @@ public class StartController : MonoBehaviour
     /// </summary>
     public void GameStart()
     {
-        sceneLoader.LoadScene("Level1");
+        sceneLoader.LoadScene(LevelStart);
     }
     
     /// <summary>

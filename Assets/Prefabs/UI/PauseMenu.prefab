@@ -442,7 +442,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8115165222270154033}
         m_TargetAssemblyTypeName: PauseController, Assembly-CSharp
-        m_MethodName: CloseMenu
+        m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -702,6 +702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuPanel: {fileID: 1804352705513080305}
   sceneLoader: {fileID: 0}
+  sceneStart: Menu
 --- !u!1 &8556040189454804281
 GameObject:
   m_ObjectHideFlags: 0
