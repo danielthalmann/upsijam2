@@ -1240,6 +1240,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
+  positionY: 0
+  positionX: 0
+  position3: 0
+  holeToSpawn: {fileID: 8762297097209636232, guid: 3d7c74e35e8e349109b48d1082dd6aa2, type: 3}
+  hauter: {x: 0, y: 0, z: 0}
 --- !u!54 &1420461553
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1740,6 +1745,10 @@ PrefabInstance:
     - target: {fileID: 8762297097209636232, guid: 3d7c74e35e8e349109b48d1082dd6aa2, type: 3}
       propertyPath: m_Name
       value: trou
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762297097209636232, guid: 3d7c74e35e8e349109b48d1082dd6aa2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8762297097209636236, guid: 3d7c74e35e8e349109b48d1082dd6aa2, type: 3}
       propertyPath: m_Materials.Array.data[0]
