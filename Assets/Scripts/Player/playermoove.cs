@@ -5,12 +5,12 @@ using UnityEngine;
 public class playermoove : MonoBehaviour
 {
     public float speed = 50;
-    private Rigidbody body;
     public float positionY;
     public float positionX;
     public float positionZ;
     public GameObject holeToSpawn;
     public Vector3 hauter;
+<<<<<<< HEAD
     public GameObject Canvas2;
     
     private void OnTriggerEnter (Collider collision)
@@ -21,6 +21,15 @@ public class playermoove : MonoBehaviour
             Application.Quit();
         }
     }
+=======
+    public Animator anim;
+    
+
+
+    private Rigidbody body;
+    private float shoot_timer = 0.5f;
+    private float t = 0;
+>>>>>>> 29f8ab8ec55f7bf751a72aa6cff265e33efba332
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +43,11 @@ public class playermoove : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
+        if(horizontalInput != 0f || verticalInput != 0f)
+            anim.SetBool("walk", true);
+        else
+            anim.SetBool("walk", false);
+
 
         Vector3 velocity = new Vector3(horizontalInput, positionY, verticalInput);
         velocity = Quaternion.AngleAxis(-45, Vector3.up) * velocity;
@@ -43,8 +57,10 @@ public class playermoove : MonoBehaviour
         body.velocity = velocity * speed;
         //body.velocity = transform.TransformDirection(body.velocity);
         // body.velocity *= speed;
-        if (Input.GetKeyDown(KeyCode.Space))
+        t += Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.Space) && t > shoot_timer)
         {
+            t = 0;
             Dig();
         }
         hauter = new Vector3(positionX, 0.51f, positionZ);
