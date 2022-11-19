@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 8762297097209636236}
   - component: {fileID: 8762297097209636237}
   - component: {fileID: 8762297097209636238}
+  - component: {fileID: 1070324083143667341}
   m_Layer: 0
   m_Name: trou
-  m_TagString: ground
+  m_TagString: trou
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,3 +113,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10.000001, y: 0.5, z: 9.88509}
   m_Center: {x: 0, y: 0, z: -0.057417408}
+--- !u!114 &1070324083143667341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8762297097209636232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c3523a0c14bb472a9f79abd100b040b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

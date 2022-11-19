@@ -12,10 +12,9 @@ public class ZombieMoove : MonoBehaviour
     Collider zombie;
 
     private void OnTriggerEnter(Collider collision)
-
     {
         Debug.Log("trigger with " + collision.gameObject.transform.name);
-        if (collision.tag == "Player" || collision.tag == "house")
+        if (collision.tag == "Player" || collision.tag == "house" || collision.tag == "trou")
         {
             zombie.isTrigger = false;
             Destroy(collision.gameObject);

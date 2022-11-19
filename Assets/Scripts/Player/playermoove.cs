@@ -10,21 +10,8 @@ public class playermoove : MonoBehaviour
     public float positionX;
     public float position3;
     public GameObject holeToSpawn;
-    Collider hole;
     public Vector3 hauter;
-
-    private void OnTriggerEnter(Collider collision)
-
-    {
-        Debug.Log("trigger with " + collision.gameObject.transform.name);
-        if (collision.tag == "Zombies" )
-        {
-            hole.isTrigger = false;
-            Destroy(collision.gameObject);
-        }
-        hole.isTrigger = true;
-
-    }
+    
     // Start is called before the first frame update
     void Start()
     {
