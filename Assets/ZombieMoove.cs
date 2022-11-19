@@ -20,7 +20,7 @@ public class ZombieMoove : MonoBehaviour
             zombie.isTrigger = false;
             Destroy(collision.gameObject);
         }
-        zombie.isTrigger = false;
+        zombie.isTrigger = true;
 
     }
     // Start is called before the first frame update
