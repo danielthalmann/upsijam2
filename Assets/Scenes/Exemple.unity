@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 248393523}
   m_Layer: 0
   m_Name: Sol
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1065,8 +1065,8 @@ GameObject:
   - component: {fileID: 1420461550}
   - component: {fileID: 1420461549}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1168,7 +1168,7 @@ GameObject:
   - component: {fileID: 1689209048}
   m_Layer: 0
   m_Name: Cabane
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
