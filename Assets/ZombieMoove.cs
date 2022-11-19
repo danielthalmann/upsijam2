@@ -15,9 +15,10 @@ public class ZombieMoove : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
 
     {
+        Debug.Log("trigger with " + collision.gameObject.transform.name);
         if (collision.tag == "Player")
         {
-            zombie.isTrigger = true;
+            zombie.isTrigger = false;
             Destroy(collision.gameObject);
         }
         zombie.isTrigger = false;
@@ -25,6 +26,7 @@ public class ZombieMoove : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("collision with " + collision.gameObject.transform.name);
         if (collision.collider.tag == "ground")
             grounded = true;
     }
@@ -36,7 +38,7 @@ public class ZombieMoove : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Move();
     }
@@ -44,7 +46,8 @@ public class ZombieMoove : MonoBehaviour
     {
         moveVelocity = 1f;
         target = new Vector3(0.0f, 1.0f, 0.0f);
-        transform.position = Vector3.MoveTowards(transform.position, target, moveVelocity * Time.deltaTime);
+        zbody.velocity = (target - transform.position).normalized * moveVelocity;
+        //transform.position = Vector3.MoveTowards(transform.position, target, moveVelocity * Time.deltaTime);
     }
 }
 
