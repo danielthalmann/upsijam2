@@ -20,8 +20,12 @@ public class playermoove : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
-        body.velocity = new Vector3(horizontalInput, position, verticalInput);
-        body.velocity = transform.TransformDirection(body.velocity);
-        body.velocity *= speed;
+
+        Vector3 velocity = new Vector3(horizontalInput, position, verticalInput);
+        velocity = Quaternion.AngleAxis(-45, Vector3.up) * velocity;
+
+        body.velocity = velocity * speed;
+        //body.velocity = transform.TransformDirection(body.velocity);
+        // body.velocity *= speed;
     }
 }   
