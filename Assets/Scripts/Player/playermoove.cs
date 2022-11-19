@@ -5,13 +5,16 @@ using UnityEngine;
 public class playermoove : MonoBehaviour
 {
     public float speed = 50;
-    private Rigidbody body;
     public float positionY;
     public float positionX;
     public float position3;
     public GameObject holeToSpawn;
     public Vector3 hauter;
-    
+
+
+    private Rigidbody body;
+    private float shoot_timer = 0.5f;
+    private float t = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,8 +37,10 @@ public class playermoove : MonoBehaviour
         body.velocity = velocity * speed;
         //body.velocity = transform.TransformDirection(body.velocity);
         // body.velocity *= speed;
-        if (Input.GetKeyDown(KeyCode.Space))
+        t += Time.deltaTime;
+        if (Input.GetKeyDown(KeyCode.Space) && t > shoot_timer)
         {
+            t = 0;
             Dig();
         }
         hauter = new Vector3(positionX, 0.51f, position3);
