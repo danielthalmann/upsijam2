@@ -6,16 +6,16 @@ using UnityEngine.UIElements;
 public class GenerateZombie : MonoBehaviour
 {
     public GameObject zombie;
-    public Vector3 positionZombie;
+
+    public float y_height;
     public float rayon;
     public float pauseTime;
-    public float nextTime;
-    public int waveOfZombies;
     // Start is called before the first frame update
+    private float nextTime;
+    private int waveOfZombies;
+
     void Start()
     {
-        rayon = 35;
-        pauseTime = 5;
         nextTime = 0;
         waveOfZombies = 0;
     }
@@ -26,19 +26,19 @@ public class GenerateZombie : MonoBehaviour
 
         if (Time.time > nextTime)
         {
-            GenerateZ();
+            GenerateZ(waveOfZombies);
             waveOfZombies++;
             nextTime = Time.time + pauseTime;
         }
         
     }
 
-    private void GenerateZ()
+    private void GenerateZ(int i)
     {
-        int i = waveOfZombies;
+        
         while(i > 0)
         {
-            positionZombie = FindRandomPosition();
+            Vector3 positionZombie = FindRandomPosition();
             Instantiate(zombie, positionZombie, Quaternion.identity);
             i--;
         }
@@ -48,8 +48,8 @@ public class GenerateZombie : MonoBehaviour
     private Vector3 FindRandomPosition()
     {
         float val = Random.Range(0, 360);
-        float x_heigt = Mathf.Cos(val) * rayon;
+        float x_height = Mathf.Cos(val) * rayon;
         float z_height = Mathf.Sin(val) * rayon;
-        return new Vector3(x_heigt, 0.51f, z_height);
+        return new Vector3(x_height, y_height, z_height);
     }
 }

@@ -174,3 +174,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  positionY: 0
+  positionX: 0
+  position3: 0
+  holeToSpawn: {fileID: 8762297097209636232, guid: 3d7c74e35e8e349109b48d1082dd6aa2, type: 3}
+  hauter: {x: 0, y: 0, z: 0}
