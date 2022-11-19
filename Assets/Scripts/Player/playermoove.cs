@@ -8,7 +8,7 @@ public class playermoove : MonoBehaviour
     private Rigidbody body;
     public float positionY;
     public float positionX;
-    public float positionZ;
+    public float position3;
     public GameObject holeToSpawn;
     public Vector3 hauter;
     // Start is called before the first frame update
@@ -29,7 +29,7 @@ public class playermoove : MonoBehaviour
         velocity = Quaternion.AngleAxis(-45, Vector3.up) * velocity;
 
         positionX = transform.position.x;
-        positionZ = transform.position.z;
+        position3 = transform.position.z;
         body.velocity = velocity * speed;
         //body.velocity = transform.TransformDirection(body.velocity);
         // body.velocity *= speed;
@@ -37,7 +37,7 @@ public class playermoove : MonoBehaviour
         {
             Dig();
         }
-        hauter = new Vector3(positionX, 0.51f, positionZ);
+        hauter = new Vector3(positionX, 0.51f, position3);
     }
 
     private void Dig()
