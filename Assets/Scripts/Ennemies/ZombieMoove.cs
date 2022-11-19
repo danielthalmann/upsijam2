@@ -37,7 +37,7 @@ public class ZombieMoove : MonoBehaviour
     }
     public void Move()
     {
-        moveVelocity = 0.5f;
+        moveVelocity = 5f;
         target = new Vector3(0.0f, 1.0f, 0.0f);
         zbody.velocity = (target - transform.position).normalized * moveVelocity;
         //transform.position = Vector3.MoveTowards(transform.position, target, moveVelocity * Time.deltaTime);
