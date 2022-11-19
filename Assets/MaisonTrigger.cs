@@ -5,6 +5,7 @@ using UnityEngine;
 public class MaisonTrigger : MonoBehaviour
 {
     public GameObject Canvas;
+    public SceneController SC;
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -12,6 +13,7 @@ public class MaisonTrigger : MonoBehaviour
         if (collision.tag == "zombie")
         {
             Canvas.SetActive(true);
+            SC.LoadScene("Menu");
         }
     }
         // Start is called before the first frame update

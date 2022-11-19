@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3684729384760869732}
   - component: {fileID: 3684729384760869738}
   - component: {fileID: 3684729384760869739}
+  - component: {fileID: 1281893420144840562}
   m_Layer: 0
   m_Name: Cabane
   m_TagString: house
@@ -89,6 +90,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.1000729, y: 1.4690721, z: 1.403131}
   m_Center: {x: 0.0012910366, y: 0.24986541, z: -0.007858515}
+--- !u!114 &1281893420144840562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3684729384760869733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c71fcf247b11f184c8f2c9bfb33e47bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Canvas: {fileID: 0}
 --- !u!1001 &7906428297941715090
 PrefabInstance:
   m_ObjectHideFlags: 0

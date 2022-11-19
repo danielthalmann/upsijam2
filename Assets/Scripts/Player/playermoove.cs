@@ -11,12 +11,24 @@ public class playermoove : MonoBehaviour
     public GameObject holeToSpawn;
     public Vector3 hauter;
     public Animator anim;
+    public GameObject Canvas2;
+    public SceneController SC;
 
 
 
     private Rigidbody body;
     private float shoot_timer = 0.5f;
     private float t = 0;
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        Debug.Log("trigger with " + collision.gameObject.transform.name);
+        if (collision.tag == "zombie")
+        {
+            Canvas2.SetActive(true);
+            SC.LoadScene("Menu");
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
