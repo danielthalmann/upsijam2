@@ -61,7 +61,7 @@ public class PauseController : MonoBehaviour
     public void Exit()
     {
         Debug.Log(sceneStart);
-          sceneLoader.LoadScene(sceneStart);
+        sceneLoader.LoadScene(sceneStart);
     }
 
 }
