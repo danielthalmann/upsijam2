@@ -8,10 +8,19 @@ public class playermoove : MonoBehaviour
     private Rigidbody body;
     public float positionY;
     public float positionX;
-    public float position3;
+    public float positionZ;
     public GameObject holeToSpawn;
     public Vector3 hauter;
+    public GameObject Canvas2;
     
+    private void OnTriggerEnter (Collider collision)
+    {
+        if (collision.tag == "zombie")
+        {
+            Canvas2.SetActive(true);
+            Application.Quit();
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +39,7 @@ public class playermoove : MonoBehaviour
         velocity = Quaternion.AngleAxis(-45, Vector3.up) * velocity;
 
         positionX = transform.position.x;
-        position3 = transform.position.z;
+        positionZ = transform.position.z;
         body.velocity = velocity * speed;
         //body.velocity = transform.TransformDirection(body.velocity);
         // body.velocity *= speed;
@@ -38,7 +47,7 @@ public class playermoove : MonoBehaviour
         {
             Dig();
         }
-        hauter = new Vector3(positionX, 0.51f, position3);
+        hauter = new Vector3(positionX, 0.51f, positionZ);
     }
 
     private void Dig()

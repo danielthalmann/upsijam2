@@ -10,14 +10,16 @@ public class ZombieMoove : MonoBehaviour
     public float moveVelocity;
     private float targetDistance;
     Collider zombie;
+    public GameObject Canvas2;
 
     private void OnTriggerEnter(Collider collision)
     {
         Debug.Log("trigger with " + collision.gameObject.transform.name);
-        if (collision.tag == "Player" || collision.tag == "house" || collision.tag == "trou")
+        if (collision.tag == "Player" || collision.tag == "trou")
         {
             zombie.isTrigger = false;
             Destroy(collision.gameObject);
+            Canvas2.SetActive(true);
         }
         zombie.isTrigger = true;
 
