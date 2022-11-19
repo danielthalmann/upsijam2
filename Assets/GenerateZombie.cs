@@ -8,7 +8,6 @@ public class GenerateZombie : MonoBehaviour
     public GameObject zombie;
 
     public float y_height;
-    public float rayon;
     public float pauseTime;
     // Start is called before the first frame update
     private float nextTime;
@@ -48,6 +47,7 @@ public class GenerateZombie : MonoBehaviour
     private Vector3 FindRandomPosition()
     {
         float val = Random.Range(0, 360);
+        float rayon =Random.Range(20, 60);
         float x_height = Mathf.Cos(val) * rayon;
         float z_height = Mathf.Sin(val) * rayon;
         return new Vector3(x_height, y_height, z_height);
