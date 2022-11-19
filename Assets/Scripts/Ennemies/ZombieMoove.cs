@@ -10,7 +10,6 @@ public class ZombieMoove : MonoBehaviour
     public float moveVelocity;
     private float targetDistance;
     Collider zombie;
-    public GameObject Canvas2;
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -19,7 +18,6 @@ public class ZombieMoove : MonoBehaviour
         {
             zombie.isTrigger = false;
             Destroy(collision.gameObject);
-            Canvas2.SetActive(true);
         }
         zombie.isTrigger = true;
 
