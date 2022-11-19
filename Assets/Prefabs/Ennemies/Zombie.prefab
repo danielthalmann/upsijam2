@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 8722935900030294797}
   - component: {fileID: 8722935900030294786}
   - component: {fileID: -7889653042702587427}
+  - component: {fileID: 6275111370492567113}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: zombie
@@ -303,3 +304,18 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &6275111370492567113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8722935900030294792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbad56249979f41fd8326bd25181ec17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: ca200ce71b62246518e14f678585995e, type: 3}
+  volume: 0
+  pitch: 0
