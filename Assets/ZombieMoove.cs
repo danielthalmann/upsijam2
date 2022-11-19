@@ -9,7 +9,6 @@ public class ZombieMoove : MonoBehaviour
     public float moveSpeed;
     public float moveVelocity;
     private float targetDistance;
-    private bool grounded = true;
     Collider zombie;
 
     private void OnTriggerEnter(Collider collision)
@@ -22,13 +21,6 @@ public class ZombieMoove : MonoBehaviour
             Destroy(collision.gameObject);
         }
         zombie.isTrigger = false;
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("collision with " + collision.gameObject.transform.name);
-        if (collision.collider.tag == "ground")
-            grounded = true;
     }
     // Start is called before the first frame update
     void Start()
