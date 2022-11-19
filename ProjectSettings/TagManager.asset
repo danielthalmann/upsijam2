@@ -8,6 +8,7 @@ TagManager:
   - player
   - house
   - zombie
+  - trou
   layers:
   - Default
   - TransparentFX
