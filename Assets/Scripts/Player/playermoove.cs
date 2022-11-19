@@ -11,15 +11,8 @@ public class playermoove : MonoBehaviour
     public float positionZ;
     public GameObject holeToSpawn;
     public Vector3 hauter;
-    public GameObject Canvas2;
-    
-    private void OnTriggerEnter (Collider collision)
-    {
-        if (collision.tag == "zombie")
-        {
-            Canvas2.SetActive(true);
-        }
-    }
+    public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +26,11 @@ public class playermoove : MonoBehaviour
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
+        if (horizontalInput != 0f || verticalInput != 0f)
+            anim.SetBool("walk", true);
+        else
+            anim.SetBool("walk", false);
+
 
         Vector3 velocity = new Vector3(horizontalInput, positionY, verticalInput);
         velocity = Quaternion.AngleAxis(-45, Vector3.up) * velocity;
@@ -53,4 +51,4 @@ public class playermoove : MonoBehaviour
     {
         Instantiate(holeToSpawn, hauter, Quaternion.identity);
     }
-}   
+}
