@@ -19,7 +19,7 @@ public class AudioZombie : MonoBehaviour
         gameObject.AddComponent<AudioSource>();
         source = GetComponent<AudioSource>();
 
-        volume = 0.5f;
+        volume = 0.8f;
         pitch = 1f;
     }
     // Start is called before the first frame update
