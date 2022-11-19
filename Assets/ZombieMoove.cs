@@ -10,12 +10,17 @@ public class ZombieMoove : MonoBehaviour
     public float moveVelocity;
     private float targetDistance;
     private bool grounded = true;
+    Collider zombie;
 
     private void OnTriggerEnter(Collider collision)
 
     {
         if (collision.tag == "Player")
+        {
+            zombie.isTrigger = true;
             Destroy(collision.gameObject);
+        }
+        zombie.isTrigger = false;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -26,6 +31,7 @@ public class ZombieMoove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        zombie = GetComponent<Collider>();
         zbody = GetComponent<Rigidbody>();
     }
 
