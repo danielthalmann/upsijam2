@@ -21,6 +21,7 @@ public class destructZombie : MonoBehaviour
         if (other.tag == "zombie")
         {
             Destroy(other.gameObject);
+            GameStatus.zombiesCounter++;
         }
 
     }

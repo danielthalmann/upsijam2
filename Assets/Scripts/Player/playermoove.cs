@@ -5,20 +5,20 @@ using UnityEngine;
 public class playermoove : MonoBehaviour
 {
     public float speed = 50;
-    public float positionY;
-    public float positionX;
-    public float positionZ;
+    public float positionY = 0.51f;
     public GameObject holeToSpawn;
-    public Vector3 hauter;
     public Animator anim;
     public GameObject Canvas2;
     public SceneController SC;
+    public float shoot_timer = 0.3f;
 
 
 
     private Rigidbody body;
-    private float shoot_timer = 0.5f;
     private float t = 0;
+    private float positionX;
+    private float positionZ;
+    private Vector3 hauter;
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -33,7 +33,7 @@ public class playermoove : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody>();
-        positionY = transform.position.y;
+        //positionY = transform.position.y;
 
     }
 
@@ -62,7 +62,7 @@ public class playermoove : MonoBehaviour
             t = 0;
             Dig();
         }
-        hauter = new Vector3(positionX, 0.51f, positionZ);
+        hauter = new Vector3(positionX, positionY, positionZ);
     }
 
     private void Dig()

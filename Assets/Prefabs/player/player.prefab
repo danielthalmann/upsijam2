@@ -77,13 +77,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee42bbf9ea0363140965391427b7f8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  positionY: 0
-  positionX: 0
-  position3: 0
+  speed: 10
+  positionY: 0.51
   holeToSpawn: {fileID: 8762297097209636232, guid: 3d7c74e35e8e349109b48d1082dd6aa2, type: 3}
-  hauter: {x: 0, y: 0, z: 0}
   anim: {fileID: 3503014750113356397}
+  Canvas2: {fileID: 0}
+  SC: {fileID: 0}
+  shoot_timer: 0.3
 --- !u!108 &-1454619268823169868
 Light:
   m_ObjectHideFlags: 0

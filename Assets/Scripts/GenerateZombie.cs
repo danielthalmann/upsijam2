@@ -9,6 +9,11 @@ public class GenerateZombie : MonoBehaviour
 
     public float y_height;
     public float pauseTime;
+    public float rayonMin = 20f;
+    public float rayonMax = 60f;
+
+
+
     // Start is called before the first frame update
     private float nextTime;
     private int waveOfZombies;
@@ -47,7 +52,7 @@ public class GenerateZombie : MonoBehaviour
     private Vector3 FindRandomPosition()
     {
         float val = Random.Range(0, 360);
-        float rayon =Random.Range(20, 60);
+        float rayon =Random.Range(rayonMin, rayonMax);
         float x_height = Mathf.Cos(val) * rayon;
         float z_height = Mathf.Sin(val) * rayon;
         return new Vector3(x_height, y_height, z_height);
